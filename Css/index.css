@@ -1,3 +1,5 @@
+
+/* Google fonts online link  */
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
 @import url("https://fonts.googleapis.com/css?family=Metal+Mania");
 
@@ -10,6 +12,16 @@
 	/* margin-left: 15px; */
 }
 
+.header_logo {
+    width: 100px;
+    /* imp every time  */
+    object-fit: contain;
+    margin: 0 20px;
+    margin-top: 18px;
+    /* background-color:black; */
+  }
+
+/* all font related thing    */
 @font-face {
     font-family: "Booter - Zero Zero";
     src: url("Fonts/Booter - Zero Zero.woff") format("woff"),
@@ -18,6 +30,7 @@
     font-style: normal;
 }
 
+/* necessary default settings  */
 * {
     box-sizing: border-box;
     font-family: Raleway;
@@ -31,12 +44,12 @@ html, body {
 }
 
 
-.top-nav a {
-    text-decoration: none;
-    color: #ddd;
-}
-.top-nav a :hover {
-    color: red;
+/* top navigation bar stylings starts here  */
+
+.fixed_box {
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .top-nav {
@@ -46,12 +59,41 @@ html, body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+
+    height: 100px;
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    /* position: sticky;
+    top: 0;
+    z-index: 100; */
+
     
 }
 
+.search-bar {
+    display: flex;
+    /* to take more space as compared to header_logo and header_nav  */
+    flex: 1;
+    align-items: center;
+    /* border-radius: 24px; */
+    /* background-color: #fff; */
+  }
+
+
+
 .left-section {
     display: flex;
+    flex: 1;
     align-items: center;
+}
+
+.top-nav a {
+    text-decoration: none;
+    color: #ddd;
+}
+.top-nav a :hover {
+    color: red;
 }
 
 .search-bar {
@@ -62,15 +104,17 @@ html, body {
 
 .search-bar input[type=text] {
     float: right;
-    padding: 12px;
+    padding: 8px;
     /* margin-top: 8px; */
     margin-right: 16px;
-    padding-left: 10rem;
-    padding-right: 11rem;
+    /* padding-left: 10rem; */
+    /* padding-right: 11rem; */
     margin-left: 16px;
     text-align: center;
     border: none;
+    /* border-radius: 10px; */
     font-size: 16px;
+    width: 100%;
   }
 
 .search-bar input {
@@ -80,13 +124,6 @@ html, body {
     color: #ffffff; */
     /* padding: 5px; */
 }
-
-/* .search-bar button {
-    background-color: transparent;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-} */
 
 .right-section {
     display: flex;
@@ -98,10 +135,10 @@ html, body {
     color: #ffffff;
     margin: 0 10px;
 }
+/* top navigation bar stylings ends here  */
 
 
-
-/************** MID NAVIGATION*********** */
+/************** MID NAVIGATION bar stylings starts here*********** */
 .mid-container {
     margin-top: 0%;
     display: flex;
@@ -127,6 +164,9 @@ html, body {
 .mid-nav a:hover{
     /* background-color: grey; */
 }
+/************** MID NAVIGATION bar stylings ends here*********** */
+
+
 
 
 /****************HEADER SECTION*********************************/
@@ -190,12 +230,10 @@ html, body {
     /* background-color: grey; */
 }
 
+
+
 /*************section***************************************/
-/* .main{
-    background-color: rosybrown;  
-    
-    padding:30px 30px;
-} */
+
 .flex-container{
     display:flex;
     /* background-color: lime; */
@@ -218,8 +256,6 @@ html, body {
     text-align: left;
 
 }
-
-
 
 
 .container{
@@ -267,6 +303,7 @@ html, body {
 
 }
 .spans{text-align: left;}
+
 
 /*************FOOTER*************************************/
 .foot{
@@ -324,12 +361,14 @@ html, body {
 .product-list {
     display: flex;
     flex-wrap: wrap;
+    /* flex-direction: row; */
     justify-content: space-around;
     margin: 20px;
 }
 
 .product {
     background-color: #fff;
+    flex-basis: 22%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     margin: 10px;
     padding: 20px;
@@ -340,7 +379,8 @@ html, body {
 .product img {
     max-width: 100%;
     height: auto;
-
+    /* very imp property  */
+    object-fit: contain;
     width: 100%;
 	height: 300px;
 }

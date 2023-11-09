@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>FASHION_HOME</title>
-    <link rel="stylesheet" href="/Css/index.css" />
 
-    <!-- Bootsstrap -->
+    <!-- top bar title -->
+    <title>FASHION_HOME</title>
+
+    <!-- link to local css  -->
+    <link rel="stylesheet" href="/Css/index.css"/>
+
+    <!-- all Bootsstrap related link -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -15,16 +19,17 @@
       crossorigin="anonymous"
     />
 
+    <!-- link related to google fonts  -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
-    <!------------------lato style------------>
     <link
       href="https://fonts.googleapis.com/css?family=Lato&display=swap"
       rel="stylesheet"
     />
-    <!--------footer logo---------------->
+
+    <!--------all link related to footer logo---------------->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -33,26 +38,38 @@
 
   <body>
     <header class="header">
-      <nav class="nav top-nav">
-        <div class="left-section">
-          <ul>
-            <li class="link"><a href="">HOME</a></li>
-            <li class="link"><a href="">STORE</a></li>
-            <li class="link"><a href="">ABOUT</a></li>
-          </ul>
-          <div class="search-bar">
-            <input type="text" placeholder="Search" />
-            <!-- <button type="submit">Search</button> -->
+      <!-- Top navigation bar -->
+      <div class="fixed_box">
+
+        <nav class="nav top-nav">
+          <!-- left section of nav bar include (Home,store,about,search bar) -->
+          <div class="left-section">
+           
+            <img
+            class="header_logo"
+            src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"/>
+            <ul>
+              <!-- <li class="link"><a href="#">HOME</a></li> -->
+              <li class="link"><a href="#">STORE</a></li>
+              <li class="link"><a href="">USER</a></li>
+            </ul>
+            
+            <div class="search-bar">
+              <input type="text" placeholder="Search" />
+            </div>
+  
           </div>
-        </div>
+          <!-- right section of nav bar include (cart logo)  -->
+          <div class="right-section">
+            <a href="/Templates/cart.html">
+              <img class="cart-icon" src="/Img/cart.png" />
+            </a>
+          </div>
+        </nav>
+        
+      </div>
 
-        <div class="right-section">
-          <a href="#">
-            <img class="cart-icon" src="/Img/cart.png" />
-          </a>
-        </div>
-      </nav>
-
+      <!-- Mid navbar includes(all types of categories such as (mens,womens,electronics,others ....))  -->
       <nav class="mid-nav">
         <div class="mid-container">
           <div><a href="">Grocerry</a></div>
@@ -61,80 +78,23 @@
           <div><a href="">Electronics</a></div>
           <div><a href="">Mens</a></div>
           <div><a href="">Womens</a></div>
-          <!-- <div>7</div>
-            <div>8</div>
-            <div>9</div>
-            <div>10</div>
-            <div>11</div>
-            <div>12</div> -->
-          <!-- <ul>
-            <li class="link"><a href="">Electronics</a></li>
-            <li class="link"><a href="">Toys</a></li>
-            <li class="link"><a href="">Grocerry</a></li>
-            <li class="link"><a href="">Electronics</a></li>
-            <li class="link"><a href="">Toys</a></li>
-          </ul> -->
         </div>
       </nav>
-
-      <!-- <div class="contain">
-        <div><span>header</span></div>
-      </div>
-      <br /><br /><br /> -->
-
-      <!-- <nav class="top-nav">
-            <div class="left-section">
-                <a href="#">Home</a>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search">
-                    <button type="submit">Search</button>
-                </div>
-            </div>
-            <div class="right-section">
-                <a href="#"><i class="fas fa-user"></i> user</a>
-                <a href="#"><i class="fas fa-shopping-cart"></i>cart</a>
-            </div>
-        </nav> -->
     </header>
+
+    <!-- all product listing goes here  -->
     <section class="product-list">
+      <!-- product 1  -->
       <div class="product">
         <img src="/Img/mens1.webp" alt="Product 1" />
         <h2>Product 1</h2>
-        <p>Description of Product 1.</p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum,
+          incidunt? Description of Product 1.
+        </p>
         <p class="price">$19.99</p>
 
-        <button
-          class="btn btn-outline-secondary add-btn update-cart"
-          data-action="add"
-          data-productname="{{val.product_name}}"
-          data-productid="{{val.pid}}"
-          data-productquantity="{{val.quantity}}"
-        >
-          Add to Cart
-        </button>
-
-        <a
-          type="button"
-          class="btn btn-outline-success"
-          data-toggle="modal"
-          data-target="#{{val.product_name}}"
-          >View</a
-        >
-      </div>
-
-      <div class="product">
-        <img src="/Img/mens2.webp" alt="Product 2" />
-        <h2>Product 2</h2>
-        <p>Description of Product 2.</p>
-        <p class="price">$24.99</p>
-
-        <button
-          class="btn btn-outline-secondary add-btn update-cart"
-          data-action="add"
-          data-productname="{{val.product_name}}"
-          data-productid="{{val.pid}}"
-          data-productquantity="{{val.quantity}}"
-        >
+        <button class="btn btn-outline-secondary add-btn update-cart">
           Add to Cart
         </button>
 
@@ -147,23 +107,177 @@
         >
       </div>
 
+      <!-- product 2  -->
+      <div class="product">
+        <img src="/Img/mens2.webp" alt="Product 2" />
+        <h2>Product 2</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta,
+          voluptatum! Description of Product 2.
+        </p>
+        <p class="price">$24.99</p>
+
+        <button class="btn btn-outline-secondary add-btn update-cart">
+          Add to Cart
+        </button>
+
+        <a
+          type="button"
+          class="btn btn-outline-success"
+          data-toggle="modal"
+          data-target="#box"
+          >View</a
+        >
+      </div>
+
+      <!-- product 3  -->
       <div class="product">
         <img src="/Img/mens3.jpg" alt="Product 1" />
-        <h2>Product 1</h2>
-        <p>Description of Product 1.</p>
+        <h2>Product 3</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
+          facere.Description of Product 3.
+        </p>
         <p class="price">$19.99</p>
+
+        <button class="btn btn-outline-secondary add-btn update-cart">
+          Add to Cart
+        </button>
+
+        <a
+          type="button"
+          class="btn btn-outline-success"
+          data-toggle="modal"
+          data-target="#box"
+          >View</a
+        >
       </div>
 
+      <!-- product 4 -->
       <div class="product">
         <img src="/Img/mens4.avif" alt="Product 2" />
-        <h2>Product 2</h2>
-        <p>Description of Product 2.</p>
-        <p class="price">$24.99</p>
+        <h2>Product 4</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+          inventore? Description of Product 2.
+        </p>
+        <p class="price">$244.99</p>
+
+        <button class="btn btn-outline-secondary add-btn update-cart">
+          Add to Cart
+        </button>
+
+        <a
+          type="button"
+          class="btn btn-outline-success"
+          data-toggle="modal"
+          data-target="#box"
+          >View</a
+        >
       </div>
 
-      <!-- Add more product items here -->
+
+
+
+
+      <!-- product 1  -->
+      <div class="product">
+        <img src="/Img/mens1.webp" alt="Product 1" />
+        <h2>Product 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum,
+          incidunt? Description of Product 1.
+        </p>
+        <p class="price">$19.99</p>
+
+        <button class="btn btn-outline-secondary add-btn update-cart">
+          Add to Cart
+        </button>
+
+        <a
+          type="button"
+          class="btn btn-outline-success"
+          data-toggle="modal"
+          data-target="#box"
+          >View</a
+        >
+      </div>
+
+      <!-- product 2  -->
+      <div class="product">
+        <img src="/Img/mens2.webp" alt="Product 2" />
+        <h2>Product 2</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta,
+          voluptatum! Description of Product 2.
+        </p>
+        <p class="price">$24.99</p>
+
+        <button class="btn btn-outline-secondary add-btn update-cart">
+          Add to Cart
+        </button>
+
+        <a
+          type="button"
+          class="btn btn-outline-success"
+          data-toggle="modal"
+          data-target="#box"
+          >View</a
+        >
+      </div>
+
+      <!-- product 3  -->
+      <div class="product">
+        <img src="/Img/mens3.jpg" alt="Product 1" />
+        <h2>Product 3</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam,
+          facere.Description of Product 3.
+        </p>
+        <p class="price">$19.99</p>
+
+        <button class="btn btn-outline-secondary add-btn update-cart">
+          Add to Cart
+        </button>
+
+        <a
+          type="button"
+          class="btn btn-outline-success"
+          data-toggle="modal"
+          data-target="#box"
+          >View</a
+        >
+      </div>
+
+      <!-- product 4 -->
+      <div class="product">
+        <img src="/Img/mens4.avif" alt="Product 2" />
+        <h2>Product 4</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+          inventore? Description of Product 2.
+        </p>
+        <p class="price">$244.99</p>
+
+        <button class="btn btn-outline-secondary add-btn update-cart">
+          Add to Cart
+        </button>
+
+        <a
+          type="button"
+          class="btn btn-outline-success"
+          data-toggle="modal"
+          data-target="#box"
+          >View</a
+        >
+      </div>
+
+      <!-- all product listing ends here  -->
     </section>
 
+
+
+    <!-- hidden product details tab work starts here  -->
     <section class="modalwork">
       <div
         class="modal fade"
@@ -179,6 +293,8 @@
               <h6 class="modal-title" id="exampleModalLongTitle">
                 Product Drescription
               </h6>
+
+              <!-- top X button for closing  -->
               <button
                 type="button"
                 class="close"
@@ -194,41 +310,29 @@
                   <img src="/Img/mens2.webp" alt="Product Image" />
                 </div>
                 <div class="product-info-container">
-                    <div class="product-info">
-                        <h2>Black Dress</h2>
-                        <p class="price">$99.99</p>
-                        <p>Description of the product goes here Lorem ipsum, dolor sit amet consectetur adipisicing elit. ?</p>
-                        <div class="ratings">
-                          <p>Ratings: <span id="average-rating">4.5</span></p>
-                          <p>Reviews: <span id="total-reviews">25</span></p>
-                        </div>
-                      </div>
+                  <div class="product-info">
+                    <h2>Black Dress</h2>
+                    <p class="price">$99.99</p>
+                    <p>
+                      Description of the product goes here Lorem ipsum, dolor
+                      sit amet consectetur adipisicing elit. ?
+                    </p>
+                    <div class="ratings">
+                      <p>Ratings: <span id="average-rating">4.5</span></p>
+                      <p>Reviews: <span id="total-reviews">25</span></p>
+                    </div>
+                  </div>
                 </div>
-                
 
-                <button
-                  class="add-to-cart"
-                >
-                  Add to Cart
-                </button>
+                <button class="add-to-cart">Add to Cart</button>
 
-                <button
-                  class="add-to-cart"
-                  id="add-review"
-                >
-                  Add Review
-                </button>
-
-                
+                <button class="add-to-cart" id="add-review">Add Review</button>
               </div>
 
-
-
-
-              <div class="reviews" id="review" style="display: none;">
+              <!-- hidden review form work starts here  -->
+              <div class="reviews" id="review" style="display: none">
                 <h5>Product Reviews</h5>
                 <ul id="reviews-list">
-                  <!-- User reviews will be added here dynamically -->
                 </ul>
                 <div class="add-review">
                   <h6>Add Your Review</h6>
@@ -251,28 +355,27 @@
                   </form>
                 </div>
               </div>
+              <!-- hidden review form work ends here  -->
+
             </div>
-            <!-- <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div> -->
           </div>
         </div>
       </div>
     </section>
-    <!-- 
-    <section class="container">
-      
-    </section> -->
+    <!-- hidden product details tab work ends here  -->
+    
+    <!-- footer works starts here  -->
     <footer class="foot">
-      <!-- <h3>one touch</h3> -->
       <div class="icon-bar">
         <a href="fb.com" class="facebook"><i class="fa fa-facebook"></i></a>
         <a href="fb.com" class="instagram"><i class="fa fa-instagram"></i></a>
         <a href="fb.com" class="google"><i class="fa fa-google"></i></a>
       </div>
     </footer>
+    <!-- footer works ends here  -->
 
+
+    <!-- w3 school jquery link so that our hidden product tab(modal) works properly starts here -->
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -290,9 +393,10 @@
       integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
       crossorigin="anonymous"
     ></script>
+    <!-- w3 school jquery link so that our hidden product tab(modal) works properly ends here -->
 
+    <!-- link to local index.js file  -->
     <script src="/js/index.js"></script>
-
 
   </body>
 </html>
